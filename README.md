@@ -3,7 +3,7 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-__Generate basic flow__
+### Generate basic flow
 
 1. Generate controller
 
@@ -13,7 +13,7 @@ __Generate basic flow__
 
 4. Create view which have the same name with method in controller
 
-__Database Setup__
+### Database Setup
 
 1. Edit file database.yml for other database (optional)
 
@@ -26,6 +26,28 @@ __Database Setup__
 5. Create file model and inherit from ApplicationRecord
 
 6. Check again with console `rails c`
+
+### Extract from database and return to user via controller
+
+1. `index` method to return all records
+
+2. `new` method to return form
+
+3. `edit` method to return form
+
+4. `show` method to return a single record by id param
+
+5. `destroy` method must use `data : { turbo_method: :delete}` in rails >= 7
+
+6. Need to permit field when **create** or **update** due to security issues
+
+7. Detach general/helper functions in controller to be `private` ones because the public ones are used to handle request
+
+### Validate data before update or create to DBs
+
+1. Specific methods in validate in model file
+
+### Migration and Config for reference models - foreign keys
 
 Things you may want to cover:
 

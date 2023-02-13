@@ -1,0 +1,28 @@
+<% if @article && @article.errors.any?%>
+    <h2>The following errors prevented the article from being save</h2>
+    <ul style="width: 50%">
+      <% @article.errors.full_messages.each do |message| %>
+        <li style="list-style: none; background-color:red; padding: .5rem; margin-bottom: .5rem;">
+          <span style="color: white;"><strong><%= message %></strong></span>    
+        </li>
+      <%end%>
+    </ul>
+  <%end %>
+
+<%# with form_with(model:, local: true) will automatically specify method patch for us %>
+<%= form_with(model: @article, local: true ) do |f| %> 
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br/>
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<br/>
+<%= link_to 'Back to List', articles_path %>
+<br/>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  # root "articles#index"
-  resources :articles, only: [:new, :index, :show, :create, :edit, :update, :destory]
+  root 'pages#index'
+
+  resources :articles, only: %i[destroy new index show edit create update]
 end

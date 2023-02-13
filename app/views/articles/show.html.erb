@@ -1,1 +1,12 @@
-<h2>Show</h2>
+<h2>Articles show</h2>
+<h3>Title</h3>
+<span><%= @article.title %></span>
+<h3>Description</h3>
+<span><%= @article.description %></span>
+<br/>
+
+<%= link_to "Edit", edit_article_path(@article) %>
+|
+<%= link_to "Delete", @article, data: { turbo_method: :delete, turbo_confirm: "Are you sure to continue to delete this article" } %>
+|
+<%= link_to "Back to List", articles_path %>
