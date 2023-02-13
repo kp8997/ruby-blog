@@ -3,7 +3,7 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-### Generate basic flow
+### 0.0.1 Generate basic flow
 
 1. Generate controller
 
@@ -13,7 +13,7 @@ application up and running.
 
 4. Create view which have the same name with method in controller
 
-### Database Setup
+### 0.0.2 Database Setup
 
 1. Edit file database.yml for other database (optional)
 
@@ -27,7 +27,7 @@ application up and running.
 
 6. Check again with console `rails c`
 
-### Extract from database and return to user via controller
+### 0.0.3 Extract from database and return to user via controller
 
 1. `index` method to return all records
 
@@ -43,11 +43,11 @@ application up and running.
 
 7. Detach general/helper functions in controller to be `private` ones because the public ones are used to handle request
 
-### Validate data before update or create to DBs
+### 0.0.4 Validate data before update or create to DBs
 
 1. Specific methods in validate in model file
 
-### Migration and Config for reference models - foreign keys
+### 0.0.5 Migration and Config for reference models - foreign keys
 
 Things you may want to cover:
 
